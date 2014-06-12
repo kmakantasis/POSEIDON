@@ -1,0 +1,68 @@
+##########################################
+##########################################
+##					##
+## 	Poseidon project config file.	##
+##					##
+##########################################
+##########################################
+
+
+
+
+
+#########################################
+#					#
+# Size of the images to process:	#
+#					#
+#########################################
+
+framewidth			320	#320		
+frameheight			180 	#180
+
+
+
+
+
+#########################################
+# 					#
+# Sensitivity parameters (thresholds): 	#
+#					#
+#########################################
+
+
+minvariance			16.0		# Typical 16.0 Min variance in each pixel
+minclustersize			0.01		# Min allowable size for foreground, wrt image size
+
+
+
+
+
+
+
+#########################################
+#					#
+# Smart Convolution parameters:		#
+#					#
+#########################################
+
+
+#1.0, 5.0 or 2.0, 3.5 ---> 1.0, 5.0
+
+sigmaMin			1.0 #5.0 #1.0  	#1.0 was good
+# 	Minimum value for sigma (for convolution kernel), 
+# 	which corresponds to the horizon and sky.
+# 	Typical value 3.0, more recently 2.5, perhaps even 2.0
+
+
+DeltaStDev			5.0	#5.0 with 1.0 above was good combo
+# 	This is the amount of increase in convolution kernel sigma 
+# 	for one whole HEIGHT of an image
+# 	Typical (Optimal!) value is 2.0. 
+
+
+thSigma				0.1		
+# 	Threshold change in sigma (for convolution kernel) for each line of pixels, 
+# 	for which a kernel will be recalculated
+# 	Typical value 0.1. 
+
+
